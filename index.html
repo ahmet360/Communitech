@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ... (existing meta tags and title) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open World in Space | Comunnitech</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
@@ -22,14 +24,78 @@
             </nav>
         </div>
         <div class="bg-wrap">
-            <!-- Place the SVG code from Code 2 here -->
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect>
+                <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform>
+                </rect>
+                <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform>
+                </rect>
+            </svg>
         </div>
-
         <div class="glowing-wrap">
-            <!-- Place the glowing divs from Code 1 here -->
+            <span style="--i: 1;"></span>
+            <span style="--i: 2;"></span>
+            <span style="--i: 3;"></span>
         </div>
     </header>
 
-    <!-- ... (existing content) ... -->
+    <section id="home" class="section">
+        <div class="content">
+            <h2>AI Creating Magical Worlds for VR</h2>
+            <p>Step into the future of VR and explore enchanting worlds brought to life by the power of Artificial Intelligence.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="content">
+            <h2>About Comunnitech</h2>
+            <p>Comunnitech is a pioneering company at the forefront of AI-powered VR world creation. Our team of experts utilizes cutting-edge technologies to develop virtual worlds beyond imagination.</p>
+            <ul>
+                <li>Experience virtual reality like never before.</li>
+                <li>Explore vast open-world landscapes in space.</li>
+                <li>Interact with intelligent AI entities in VR environments.</li>
+                <li>Embark on unique quests and adventures in our virtual realms.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="content">
+            <h2>Our Services</h2>
+            <p>We offer a wide range of services to cater to different needs and industries. Our AI-generated VR worlds have endless applications, including:</p>
+            <ul>
+                <li>Entertainment and Gaming</li>
+                <li>Education and Training Simulations</li>
+                <li>Architectural Visualization</li>
+                <li>Healthcare and Therapy</li>
+                <li>Real Estate Virtual Tours</li>
+                <li>And much more!</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Interested in experiencing our magical VR worlds? Reach out to us for inquiries, collaborations, or any questions you may have.</p>
+            <p>Email: contact@comunnitech.com</p>
+            <p>Phone: +1-123-456-7890</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Comunnitech. All rights reserved.</p>
+    </footer>
+
+    <!-- Hidden button to change the fact of the day -->
+    <button id="changeFactBtn" class="hidden-btn">
+        <img src="FOTD.png" alt="Change Fact of the Day">
+    </button>
+
+    <div class="fact-container">
+        <h3>Fact of the Day</h3>
+        <p id="fact"></p>
+    </div>
 </body>
 </html>
