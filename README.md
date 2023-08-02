@@ -1,1 +1,1 @@
-# Communitech
+# CommuniTech
