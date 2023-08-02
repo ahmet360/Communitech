@@ -9,20 +9,6 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-top">
-            <div class="logo">
-                <img src="Globetech.png" alt="Comunnitech Logo">
-                <h1>Comunnitech</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
         <div class="bg-wrap">
             <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                 <defs>
@@ -61,22 +47,26 @@
                 <!-- Add more rectangles with other gradients (Gradient4, Gradient5, etc.) -->
             </svg>
         </div>
-        
-        
-        <div class="glowing-wrap">
-            <span style="--i: 1;"></span>
-            <span style="--i: 2;"></span>
-            <span style="--i: 3;"></span>
+        <div class="header-top">
+            <div class="logo">
+                <img src="Globetech.png" alt="Comunnitech Logo">
+                <h1>Comunnitech</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section id="home" class="section">
-        <div class="content">
-            <h2>AI Creating Magical Worlds for VR</h2>
-            <p>Step into the future of VR and explore enchanting worlds brought to life by the power of Artificial Intelligence.</p>
-            <a href="#about" class="btn">Learn More</a>
-        </div>
-    </section>
+    <div class="fact-container">
+        <h3>Fact of the Day</h3>
+        <p id="fact"></p>
+    </div>
 
     <section id="about" class="section">
         <div class="content">
@@ -110,11 +100,10 @@
         <div class="content">
             <h2>Contact Us</h2>
             <p>Interested in experiencing our magical VR worlds? Reach out to us for inquiries, collaborations, or any questions you may have.</p>
-            <p>Email: contact@comunnitech.com</p>
-            <p>Phone: +1-123-456-7890</p>
+            <p>Email: </p>
+            <p>Phone: </p>
         </div>
     </section>
-
     <footer class="footer">
         <p>&copy; 2023 Comunnitech. All rights reserved.</p>
     </footer>
@@ -123,10 +112,5 @@
     <button id="changeFactBtn" class="hidden-btn">
         <img src="FOTD.png" alt="Change Fact of the Day">
     </button>
-
-    <div class="fact-container">
-        <h3>Fact of the Day</h3>
-        <p id="fact"></p>
-    </div>
 </body>
 </html>
