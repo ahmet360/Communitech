@@ -1,10 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Added box-sizing for better layout handling */
 }
 
 body {
     position: relative;
+    overflow: hidden; /* Moved overflow hidden to the body element */
+    margin: 0; /* Removed duplication */
 }
 
 /* Header Styles */
@@ -148,19 +151,19 @@ nav a:hover {
     border-radius: 50%;
 }
 
-.glowing-wrap span:nth-child(3n + 1)::before {
+.glowing-wrap span:nth-child(3n + 1)::before,
+.glowing-wrap span:nth-child(3n + 2)::before,
+.glowing-wrap span:nth-child(3n + 3)::before {
     background: rgba(134, 255, 0, 1);
     box-shadow: 0 0 20px rgba(134, 255, 0, 1), 0 0 40px rgba(134, 255, 0, 1), 0 0 60px rgba(134, 255, 0, 1), 0 0 80px rgba(134, 255, 0, 1), 0 0 0 8px rgba(134, 255, 0, 0.1);
 }
 
 .glowing-wrap span:nth-child(3n + 2)::before {
     background: rgba(255, 214, 0, 1);
-    box-shadow: 0 0 20px rgba(255, 214, 0, 1), 0 0 40px rgba(255, 214, 0, 1), 0 0 60px rgba(255, 214, 0, 1), 0 0 80px rgba(255, 214, 0, 1), 0 0 0 8px rgba(255, 214, 0, 0.1);
 }
 
 .glowing-wrap span:nth-child(3n + 3)::before {
     background: rgba(0, 226, 255, 1);
-    box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1), 0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1), 0 0 0 8px rgba(0, 226, 255, 0.1);
 }
 
 .glowing-wrap span:nth-child(3n + 1) {
@@ -219,6 +222,5 @@ nav a:hover {
     font-size: 18px;
     margin-top: 10px;
 }
-body {
-    overflow: hidden;
-}
+
+/* Other styles for the sections, buttons, etc. */
