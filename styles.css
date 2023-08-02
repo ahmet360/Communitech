@@ -1,0 +1,39 @@
+/* ... (existing styles) ... */
+
+.header {
+    /* ... (existing styles) ... */
+    animation: fadeIn 1s;
+}
+
+.footer {
+    /* ... (existing styles) ... */
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.hidden-btn img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.hidden-btn.show {
+    opacity: 1;
+}
