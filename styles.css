@@ -219,3 +219,6 @@ nav a:hover {
     font-size: 18px;
     margin-top: 10px;
 }
+body {
+    overflow: hidden;
+}
