@@ -1,13 +1,13 @@
-* {
+/* Reset styles */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Added box-sizing for better layout handling */
+    box-sizing: border-box;
     color: black;
 }
 
 body {
-    position: relative;
-    margin: 0; /* Removed duplication */
+    font-family: Arial, sans-serif;
 }
 
 /* Header Styles */
@@ -68,7 +68,7 @@ nav a:hover {
 
 /* Main Content Styles */
 .section {
-    padding: 80px 20px;
+    padding: 60px 10px;
     text-align: center;
     color: #fff;
     position: relative;

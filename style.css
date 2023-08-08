@@ -1,0 +1,151 @@
+/* Reset styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Global styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0; /* Smaller padding */
+    z-index: 2;
+}
+
+/* Header styles */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.logo img {
+    width: 50px; /* Slightly smaller logo size */
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 20px; /* Slightly smaller font size */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px; /* Smaller spacing between nav items */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Slightly smaller font size */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Section styles */
+.section {
+    padding: 80px 20px;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Content within sections */
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 28px; /* Slightly smaller font size */
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 16px; /* Slightly smaller font size */
+    line-height: 1.6;
+}
+
+.content ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.content ul li {
+    font-size: 16px; /* Slightly smaller font size */
+    margin-bottom: 10px;
+}
+
+/* Fact of the Day container styles */
+.fact-container {
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #333;
+}
+
+.fact-container h3 {
+    font-size: 20px; /* Slightly smaller font size */
+}
+
+.fact-container p {
+    font-size: 16px; /* Slightly smaller font size */
+    margin-top: 10px;
+}
+
+/* Footer styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Hidden button styles */
+.hidden-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hidden-btn img {
+    width: 30px;
+    height: 30px;
+}
