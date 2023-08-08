@@ -149,3 +149,13 @@ nav a:hover {
     width: 30px;
     height: 30px;
 }
+
+
+#fun-fact {
+    background-color: #f5f5f5; /* Adjust background color as needed */
+}
+
+#fun-fact .content {
+    padding: 80px 20px;
+    text-align: center;
+}
