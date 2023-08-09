@@ -513,7 +513,8 @@
   .price-card-cont{
     width:300px;
     padding:7px;
-    float:left;
+    float:center;
+    min-width: 250px;
   }
   .price-card{
     margin:0 auto;
@@ -523,6 +524,7 @@
     font-weight:100;
     color:#fff;
     width:90%;
+    display: flex;
   }
   .pc-title{
     font-weight:100;
@@ -551,6 +553,7 @@
     font-size:35px;
     text-align:center;
     padding:35px 0;
+    white-space: nowrap;
   }
   .pc-regular{
     background-color:#da78a0;
@@ -623,4 +626,9 @@
   #i5ts{
     width:200px;
   }
+  @media (max-width: 768px) {
+  .price-cards {
+    flex-direction: column;
+  }
+}
 </style>
