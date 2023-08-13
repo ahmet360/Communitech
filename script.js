@@ -7,6 +7,8 @@ const factsOfTheDay = [
     "Fact 5: Comunnitech's AI algorithms create breathtaking VR worlds from simple prompts."
 ];
 
+
+
 // Function to get a random fact
 function getRandomFact() {
     return factsOfTheDay[Math.floor(Math.random() * factsOfTheDay.length)];

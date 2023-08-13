@@ -1,6 +1,7 @@
 <body>
     <header class="header-banner" id="i5ij">
       <div class="container-width">
+        
         <div class="logo-container">
           <div class="logo" id="i5ts">COMMUNITECH
           </div>
@@ -8,7 +9,7 @@
         <nav class="menu">
           <div class="menu-item">BUILDER
           </div>
-          <div class="menu-item">TEMPLATE
+          <div class="menu-item"><a href='#vid'>TEMPLATE</a>
           </div>
           <div class="menu-item" id="ig9o4">WEB
           </div>
@@ -23,7 +24,11 @@
         </div>
       </div>
     </header>
-    
+    <!-- Button to generate random fact -->
+    <button id="changeFactBtn" class="fact-button">Generate Random Fact</button>
+
+    <!-- Display area for the random fact -->
+    <b><div id="fact" style="text-align: center; font-size:45px"></div></b>
     <section class="flex-sect">
       <div class="container-width">
         <div class="flex-title">Flex is the new black
@@ -176,9 +181,11 @@
 
 <!--VIDEO-->
     <section class="flex-sect">
-      <h1 style="text-align: center;">DIY Video</h1>
+      <h1 style="text-align: center;" id="vid">DIY Video</h1>
       <iframe width="100%" height="650px" src="https://www.youtube.com/embed/3bc3tfcsfxA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
     </section>
+
+     
 
     <section class="bdg-sect">
       <div class="container-width">
@@ -318,14 +325,60 @@
         </div>
       </div>
     </footer>-->
-  
+
+    <!--NOTE FOR AHMED: THIS SECTION ALL THE WAY TO THE JAVASCRIPT STYLE AT THE END IS FOR THE FACT OF THE DAY-->
+    
+   <!-- Your JavaScript code here, THIS JAVASCRIPT CODE IS FOR THE RANDOM FACT OF THE DAY -->
+    <script>
+        // Fact of the Day data
+        const factsOfTheDay = [
+            "Fact 1: AI-powered VR is revolutionizing the way we experience virtual worlds.",
+            "Fact 2: Virtual Reality has endless applications, from gaming to training simulations.",
+            "Fact 3: Augmented Reality enhances our real-world experiences through digital overlays.",
+            "Fact 4: Mixed Reality combines virtual and physical worlds for interactive experiences.",
+            "Fact 5: Comunnitech's AI algorithms create breathtaking VR worlds from simple prompts."
+        ];
+
+        // Function to get a random fact
+        function getRandomFact() {
+            return factsOfTheDay[Math.floor(Math.random() * factsOfTheDay.length)];
+        }
+
+        // Function to display the fact of the day
+        function displayFactOfTheDay() {
+            const factElement = document.getElementById("fact");
+            factElement.textContent = getRandomFact();
+        }
+
+        // Add click event listener to the button
+        document.getElementById("changeFactBtn").addEventListener("click", displayFactOfTheDay);
+    </script>
   </body>
-  <style>* {
+  <style>
+  * {
     box-sizing: border-box;
     }
     body {
       margin: 0;
     }
+
+    .fact-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #d983a6;
+        color: white;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .fact-button:hover {
+        background-color: #4d114f;
+    }
+
     .clearfix{
       clear:both;
     }
@@ -336,6 +389,7 @@
       font-family:Helvetica, serif;
       font-weight:100;
       background-image:url("https://grapesjs.com/img/bg-gr-v.png"), url("https://grapesjs.com/img/work-desk.jpg");
+      
       background-attachment:scroll, scroll;
       background-position:left top, center center;
       background-repeat:repeat-y, no-repeat;
