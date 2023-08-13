@@ -18,7 +18,7 @@
   <button id="changeFactBtn" class="fact-button">Generate Random Fact</button>
 
   <!-- Display area for the random fact -->
-  <b><div id="fact" style="text-align: center; font-size:2rem"></div></b>
+  <b><div id="fact" style="text-align: center; font-size:2rem">VR technology enables users to experience various career paths through simulations.</div></b>
 
   <!--Note for Ahmet , working on the flex is the new black section-->
   <!--ADDING DEMO, LINK TO VIDEO, LINK TO SLIDE-->
@@ -420,6 +420,8 @@
   function getRandomFact() {
       return factsOfTheDay[Math.floor(Math.random() * factsOfTheDay.length)];
   }
+  const factElement = document.getElementById("fact");
+  factElement.textContent = getRandomFact();
 
   // Function to display the fact of the day
   function displayFactOfTheDay() {
