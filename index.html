@@ -13,6 +13,15 @@
       </div>
     </div>
   </header>
+  
+  <!-- Button to generate random fact -->
+  <button id="changeFactBtn" class="fact-button">Generate Random Fact</button>
+
+  <!-- Display area for the random fact -->
+  <b><div id="fact" style="text-align: center; font-size:2rem"></div></b>
+
+  <!--Note for Ahmet , working on the flex is the new black section-->
+  <!--ADDING DEMO, LINK TO VIDEO, LINK TO SLIDE-->
   <section class="flex-sect">
     <div class="container-width">
       <div class="flex-title">Flex is the new black.
@@ -24,11 +33,11 @@
           <div class="card-header">
           </div>
           <div class="card-body">
-            <div class="card-title">Title one
+            <div class="card-title">Demo
             </div>
-            <div class="card-sub-title">Subtitle one
+            <div class="card-sub-title">Try it out!
             </div>
-            <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            <div class="card-desc"><a href="demo.html" style="color: black;"><b>CLICK TO VIEW THE DEMO</b></a>
             </div>
           </div>
         </div>
@@ -36,11 +45,11 @@
           <div class="card-header ch2">
           </div>
           <div class="card-body">
-            <div class="card-title">Title two
+            <div class="card-title">DIY VIDEO
             </div>
-            <div class="card-sub-title">Subtitle two
+            <div class="card-sub-title">Make the headset yourself?
             </div>
-            <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            <div class="card-desc"><a href="video.html" style="color: black;"><b>CLICK TO VIEW THE VIDEO</b></a>
             </div>
           </div>
         </div>
@@ -48,17 +57,18 @@
           <div class="card-header ch3">
           </div>
           <div class="card-body">
-            <div class="card-title">Title three
+            <div class="card-title">Powerpoint
             </div>
-            <div class="card-sub-title">Subtitle three
+            <div class="card-sub-title">Check the powerpoint?
             </div>
-            <div class="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            <div class="card-desc"><a href="slides.html" style="color: black;"><b>CLICK TO VIEW THE SLIDE</b></a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 
 <section class="blk-sect">
     <div class="container-width">
@@ -188,12 +198,263 @@
       </div>
     </section>
 </body>
+<script>
+  // Fact of the Day data
+  const factsOfTheDay = [
+  "AI-powered VR is revolutionizing the way we experience virtual worlds.",
+  "Virtual Reality has endless applications, from gaming to training simulations.",
+  "Augmented Reality enhances our real-world experiences through digital overlays.",
+  "Mixed Reality combines virtual and physical worlds for interactive experiences.",
+  "Comunnitech's AI algorithms create breathtaking VR worlds from simple prompts.",
+  "VR technology is being used to treat phobias and anxiety disorders effectively.",
+  "NASA utilizes VR to train astronauts for space missions and simulate microgravity environments.",
+  "VR arcades are becoming popular social hubs for immersive entertainment.",
+  "Architects use VR to visualize and modify building designs before construction begins.",
+  "The medical field employs VR for pain management and rehabilitation therapies.",
+  "VR concerts and events allow attendees to experience performances from anywhere in the world.",
+  "The military employs VR simulations for combat training and strategic planning.",
+  "VR headsets can transport users to historical events and ancient civilizations.",
+  "Educational institutions use VR to make learning more engaging and interactive.",
+  "VR-based exposure therapy helps individuals confront and overcome their fears.",
+  "VR meditation apps offer immersive relaxation experiences for stress relief.",
+  "The fashion industry uses VR to create virtual showrooms and design prototypes.",
+  "VR technology is used in virtual tourism, allowing users to explore destinations remotely.",
+  "Virtual Reality can provide empathy-building experiences by putting users in others' shoes.",
+  "VR surgical simulations aid medical students in practicing complex procedures.",
+  "VR simulations are used to study and understand human and animal behaviors.",
+  "The automotive industry utilizes VR for designing and testing vehicle prototypes.",
+  "VR job training programs simulate real work scenarios to enhance employee skills.",
+  "Artists and designers create 3D sculptures and paintings in virtual reality.",
+  "VR therapy is used for treating post-traumatic stress disorder (PTSD) in veterans.",
+  "Aerospace engineers use VR to visualize and optimize spacecraft designs.",
+  "Virtual Reality enhances remote collaboration by creating shared virtual workspaces.",
+  "VR can be used to create empathy for environmental and social issues.",
+  "VR brain-computer interfaces allow users to control technology with their thoughts.",
+  "Psychologists use VR to study human behavior and reactions in controlled environments.",
+  "Virtual Reality can be used to preserve cultural heritage and historical sites.",
+  "VR medical simulations help doctors refine their skills and stay updated on procedures.",
+  "VR technology has the potential to revolutionize the real estate industry.",
+  "VR escape rooms offer interactive and challenging puzzle-solving experiences.",
+  "Sports teams use VR to analyze player performance and develop game strategies.",
+  "VR therapy has shown promising results in treating phobias and anxiety disorders.",
+  "In virtual reality, users can explore fantastical landscapes and impossible worlds.",
+  "VR-assisted mindfulness training helps individuals achieve mental clarity and focus.",
+  "VR simulations assist architects in creating energy-efficient and sustainable buildings.",
+  "Virtual Reality can simulate extreme weather conditions for training purposes.",
+  "VR technology enables remote virtual job interviews and recruitment processes.",
+  "Musicians can perform in virtual reality to global audiences without physical travel.",
+  "VR exposure therapy is used to treat social anxiety and public speaking phobias.",
+  "VR simulations are used to develop and test new product designs before production.",
+  "VR technology has been employed in space exploration for astronaut training.",
+  "Virtual Reality field trips allow students to explore distant locations without leaving the classroom.",
+  "VR simulations help firefighters train for various emergency scenarios.",
+  "Virtual Reality can provide empathy-building experiences by simulating life in different cultures.",
+  "VR technology assists in creating realistic simulations for aviation training.",
+  "Virtual Reality storytelling creates immersive narratives with user interaction.",
+  "VR-based mindfulness apps offer users a chance to unwind and relax virtually.",
+  "VR medical training helps improve patient outcomes through better-prepared healthcare professionals.",
+  "VR simulations enable researchers to study the effects of certain situations on human behavior.",
+  "Virtual Reality concerts provide a unique and personalized way to experience live music.",
+  "VR simulations are used to evaluate and enhance cognitive abilities in aging populations.",
+  "VR technology can simulate the challenges of living with disabilities for empathy-building.",
+  "Virtual Reality art galleries showcase digital artworks in immersive environments.",
+  "VR therapy is being explored for treating substance abuse and addiction.",
+  "VR architectural walkthroughs help clients visualize and approve building designs.",
+  "Virtual Reality travel experiences offer a glimpse into different parts of the world.",
+  "VR simulations are used to enhance training for law enforcement officers.",
+  "VR technology is used in archaeological research to recreate ancient sites and artifacts.",
+  "Virtual Reality can simulate job environments for vocational training and skill development.",
+  "VR simulations assist in training pilots for various flight conditions and emergencies.",
+  "VR medical simulations contribute to reducing medical errors and improving patient safety.",
+  "Virtual Reality meditation apps transport users to serene and calming environments.",
+  "VR technology enables the exploration of outer space without leaving Earth.",
+  "VR simulations are used in disaster preparedness training for emergency responders.",
+  "Virtual Reality fashion shows redefine how clothing lines are presented to the public.",
+  "VR-assisted exposure therapy helps individuals confront traumatic memories and experiences.",
+  "VR simulations aid in designing ergonomic and user-friendly product interfaces.",
+  "Virtual Reality is used in courtroom recreations to assist in legal proceedings.",
+  "VR technology can simulate different eras for historical and cultural education.",
+  "VR simulations are used for training and certifying heavy machinery operators.",
+  "Virtual Reality cooking classes provide step-by-step guidance from renowned chefs.",
+  "VR therapy is being researched as a potential treatment for depression.",
+  "VR simulations are used to train astronauts in handling spacewalks and equipment.",
+  "Virtual Reality can recreate architectural wonders that have been lost to history.",
+  "VR technology assists in understanding and visualizing complex scientific concepts.",
+  "VR simulations are used to test and optimize the usability of new products.",
+  "Virtual Reality fitness programs make workouts more engaging and interactive.",
+  "VR therapy is explored for helping individuals cope with chronic pain.",
+  "VR technology transforms the way museums and galleries present their exhibits.",
+  "VR simulations provide insight into the experiences of individuals with different abilities.",
+  "Virtual Reality gardening tutorials offer guidance in cultivating plants and landscapes.",
+  "VR technology can recreate the experience of famous historical events.",
+  "VR simulations are used to train heavy equipment operators for construction projects.",
+  "Virtual Reality language immersion programs accelerate language learning through practice.",
+  "VR therapy is researched as a tool for reducing symptoms of anxiety disorders.",
+  "VR technology enhances visualization of data and complex information.",
+  "VR simulations enable exploration of the deep sea and marine ecosystems.",
+  "Virtual Reality hiking experiences simulate trails and natural landscapes for indoor exploration.",
+  "VR technology is used in simulating and analyzing architectural acoustics.",
+  "VR simulations are used to study and mitigate the impact of natural disasters.",
+  "Virtual Reality dance classes provide tutorials and choreography in immersive settings.",
+  "VR medical training offers a risk-free environment for practicing delicate surgical procedures.",
+  "VR technology helps simulate and analyze fluid dynamics for engineering applications.",
+  "VR simulations offer a way to experience ancient historical sites as they once were.",
+  "Virtual Reality wildlife safaris allow users to observe animals in their natural habitats.",
+  "VR technology assists in understanding complex mathematical concepts through visualizations.",
+  "VR simulations are used for training in hazardous and high-risk occupations.",
+  "Virtual Reality paranormal investigations create spooky and immersive ghost-hunting experiences.",
+  "VR therapy is explored as a complementary treatment for post-traumatic stress disorder.",
+  "VR simulations help astronauts practice spacecraft docking maneuvers.",
+  "VR technology enables architectural preservation through digital reconstructions.",
+  "Virtual Reality simulations simulate the experience of extreme sports and activities.",
+  "VR medical training contributes to reducing medical procedure-related complications.",
+  "VR technology is used to create interactive experiences for historical reenactments.",
+  "VR simulations assist in designing disaster-resistant infrastructure and buildings.",
+  "Virtual Reality spacewalk simulations provide a taste of life as an astronaut.",
+  "VR technology allows users to experience the challenges of being differently-abled.",
+  "VR simulations are used to train operators of public transportation systems.",
+  "Virtual Reality chemistry labs offer interactive learning experiences for students.",
+  "VR therapy is researched for its potential in treating obsessive-compulsive disorder (OCD).",
+  "VR technology aids in the visualization of complex molecular structures.",
+  "VR simulations are used in developing and testing self-driving car algorithms.",
+  "Virtual Reality offers historical recreations of famous speeches and events.",
+  "VR medical simulations improve the accuracy and efficiency of medical procedures.",
+  "VR technology is used for simulating and optimizing urban planning scenarios.",
+  "Virtual Reality allows users to explore fictional worlds from literature and movies.",
+  "VR simulations assist in designing and testing renewable energy systems.",
+  "VR therapy is being studied for its effectiveness in reducing symptoms of phobias.",
+  "VR technology enables users to experience various career paths through simulations.",
+  "Virtual Reality crime scene investigations provide immersive training for law enforcement.",
+  "VR simulations help architects understand the impact of lighting on spaces.",
+  "VR medical training enhances students' skills in diagnosing medical conditions.",
+  "VR technology is used to simulate and study the behavior of materials under stress.",
+  "Virtual Reality music studios enable collaborative music creation across distances.",
+  "VR simulations are used to educate about and promote sustainable lifestyles.",
+  "VR therapy is explored as a tool for managing and reducing chronic stress.",
+  "VR technology offers immersive language learning experiences in diverse settings.",
+  "Virtual Reality simulations simulate the experience of piloting aircraft.",
+  "VR medical simulations are used for training emergency medical responders.",
+  "VR technology aids in simulating and analyzing fluid flow for engineering design.",
+  "Virtual Reality simulations recreate historical landmarks and lost architectural marvels.",
+  "VR therapy is being researched for its potential in treating eating disorders.",
+  "VR technology is used to simulate and optimize traffic flow in cities.",
+  "Virtual Reality offers virtual tours of art galleries and exhibitions from around the world.",
+  "VR simulations assist in designing and testing disaster response plans.",
+  "VR medical training enhances skills in administering anesthesia and managing patients.",
+  "VR technology is used for simulating and analyzing electromagnetic fields for engineering applications.",
+  "Virtual Reality offers interactive storytelling experiences with user-driven narratives.",
+  "VR simulations help educators develop innovative teaching methods and approaches.",
+  "VR therapy is being explored for its potential in treating insomnia and sleep disorders.",
+  "VR technology aids in simulating and analyzing thermal dynamics for engineering design.",
+  "Virtual Reality simulations provide historical reenactments of famous battles and events.",
+  "VR medical simulations contribute to improving surgical precision and outcomes.",
+  "VR technology offers simulated environments for testing new transportation systems.",
+  "Virtual Reality simulations offer training in negotiation and conflict resolution skills.",
+  "VR therapy is researched as a complementary approach to treating substance use disorders.",
+  "VR technology is used for simulating and optimizing communication networks.",
+  "Virtual Reality provides simulated archaeological excavations and historical research.",
+  "VR simulations assist in designing and testing sustainable agricultural practices.",
+  "VR medical training improves skills in diagnosing and treating mental health conditions.",
+  "VR technology offers simulated environments for testing urban design concepts.",
+  "Virtual Reality simulations offer training in leadership and management skills.",
+  "VR therapy is explored for its potential in aiding grief and loss counseling.",
+  "VR technology is used to simulate and optimize manufacturing processes.",
+  "Virtual Reality provides immersive experiences of extinct species and prehistoric worlds.",
+  "VR simulations assist in designing and testing efficient waste management systems.",
+  "VR medical training enhances skills in administering emergency medical care.",
+  "VR technology offers simulated environments for testing new energy distribution systems.",
+  "Virtual Reality simulations offer training in public speaking and presentation skills.",
+  "VR therapy is researched for its potential in managing chronic pain conditions.",
+  "VR technology is used to simulate and optimize structural integrity in engineering.",
+  "Virtual Reality provides historical recreations of cultural festivals and celebrations.",
+  "VR simulations assist in designing and testing accessible infrastructure.",
+  "VR medical training enhances skills in handling medical emergencies and trauma cases.",
+  "VR technology offers simulated environments for testing smart city technologies.",
+  "Virtual Reality provides interactive experiences of ancient myths and legends.",
+  "VR simulations offer training in teamwork and collaboration skills.",
+  "VR therapy is explored as a tool for improving self-esteem and self-confidence.",
+  "VR technology is used to simulate and optimize fluid mixing processes.",
+  "Virtual Reality offers historical recreations of important scientific discoveries.",
+  "VR simulations assist in designing and testing sustainable transportation systems.",
+  "VR medical training improves skills in culturally sensitive healthcare practices.",
+  "VR technology offers simulated environments for testing architectural acoustics.",
+  "Virtual Reality provides immersive experiences of significant historical events.",
+  "VR simulations offer training in time management and productivity skills.",
+  "VR therapy is researched for its potential in treating social anxiety disorders.",
+  "VR technology is used to simulate and optimize chemical reactions in engineering.",
+  "Virtual Reality offers historical recreations of famous inventors and innovators.",
+  "VR simulations assist in designing and testing disaster-resistant communities.",
+  "VR medical training enhances skills in remote patient monitoring and telemedicine.",
+  "VR technology offers simulated environments for testing environmental conservation strategies.",
+  "Virtual Reality provides interactive experiences of ancient civilizations.",
+  "VR simulations offer training in problem-solving and critical thinking skills.",
+  "VR therapy is explored as a tool for improving impulse control and emotional regulation.",
+  "VR technology is used to simulate and optimize materials synthesis processes.",
+  "Virtual Reality offers historical recreations of groundbreaking technological advancements.",
+  "VR simulations assist in designing and testing sustainable water management systems.",
+  "VR medical training improves skills in palliative and end-of-life care.",
+  "VR technology offers simulated environments for testing renewable energy solutions.",
+  "Virtual Reality provides immersive experiences of pivotal moments in history.",
+  "VR simulations offer training in empathy and interpersonal communication skills.",
+  "VR therapy is researched for its potential in treating personality disorders.",
+  "VR technology is used to simulate and optimize food production processes.",
+  "Virtual Reality offers historical recreations of influential political movements.",
+  "VR simulations assist in designing and testing urban resilience strategies.",
+  "VR medical training enhances skills in geriatric and elder care.",
+  "VR technology offers simulated environments for testing space exploration technologies.",
+  "Virtual Reality provides interactive experiences of important cultural shifts.",
+  "VR simulations offer training in adaptability and change management skills.",
+  "VR therapy is explored as a tool for improving emotional intelligence and empathy.",
+  "VR technology is used to simulate and optimize supply chain processes.",
+  "Virtual Reality offers historical recreations of major global conflicts.",
+  "VR simulations assist in designing and testing disaster recovery plans.",
+  "VR medical training improves skills in neonatal and pediatric care.",
+  "VR technology offers simulated environments for testing advanced robotics systems.",
+  "Virtual Reality provides immersive experiences of influential artistic movements.",
+  "VR simulations offer training in leadership and decision-making skills.",
+  "VR therapy is researched for its potential in treating personality disorders."
+];
+
+
+  // Function to get a random fact
+  function getRandomFact() {
+      return factsOfTheDay[Math.floor(Math.random() * factsOfTheDay.length)];
+  }
+
+  // Function to display the fact of the day
+  function displayFactOfTheDay() {
+      const factElement = document.getElementById("fact");
+      factElement.textContent = getRandomFact();
+  }
+
+  // Add click event listener to the button
+  document.getElementById("changeFactBtn").addEventListener("click", displayFactOfTheDay);
+</script>
+
+
   <style>* {
     box-sizing: border-box;
     }
     .additional{
       font-size: 10px;
       color:#cccccc;
+    }
+     /* Note for Ahmed, add the fact button and the fact button hover */
+     .fact-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #d983a6;
+        color: white;
+        border: none;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .fact-button:hover {
+        background-color: #4d114f;
     }
     .priceing{ 
 font-size: 20px;
@@ -324,27 +585,25 @@ font-size: 20px;
       margin-top:-5px;
       box-shadow:0 20px 30px 0 rgba(0, 0, 0, 0.2);
     }
-    .card-header{
+      /* NOTE FOR AHMET CSS CHANGES*/
+      .card-header{
       height:155px;
-      background-image:url("https://via.placeholder.com/350x250/78c5d6/fff");
+      /*background-image:url("https://via.placeholder.com/350x250/78c5d6/fff");*/
+      background-image:url("demo.png");
       background-size:cover;
       background-position:center center;
     }
+    /* NOTE FOR AHMET ANOTHER CHANGE*/
     .card-header.ch2{
-      background-image:url("https://via.placeholder.com/350x250/459ba8/fff");
+      /*background-image:url("https://via.placeholder.com/350x250/459ba8/fff");*/
+      background-image:url("diy.png");
     }
+    /* Note for Ahmet another change */
     .card-header.ch3{
-      background-image:url("https://via.placeholder.com/350x250/79c267/fff");
+      /*background-image:url("https://via.placeholder.com/350x250/79c267/fff");*/
+      background-image:url("slide.png");
     }
-    .card-header.ch4{
-      background-image:url("https://via.placeholder.com/350x250/c5d647/fff");
-    }
-    .card-header.ch5{
-      background-image:url("https://via.placeholder.com/350x250/f28c33/fff");
-    }
-    .card-header.ch6{
-      background-image:url("https://via.placeholder.com/350x250/e868a2/fff");
-    }
+
     .card-body{
       padding:15px 15px 5px 15px;
       color:#555;
